@@ -12,12 +12,21 @@ public class Links_ {
     @SerializedName("html")
     @Expose
     private String html;
-    @SerializedName("download")
+    @SerializedName("photos")
     @Expose
-    private String download;
-    @SerializedName("download_location")
+    private String photos;
+    @SerializedName("likes")
     @Expose
-    private String downloadLocation;
+    private String likes;
+    @SerializedName("portfolio")
+    @Expose
+    private String portfolio;
+    @SerializedName("following")
+    @Expose
+    private String following;
+    @SerializedName("followers")
+    @Expose
+    private String followers;
 
     public String getSelf() {
         return self;
@@ -35,20 +44,44 @@ public class Links_ {
         this.html = html;
     }
 
-    public String getDownload() {
-        return download;
+    public String getPhotos() {
+        return photos;
     }
 
-    public void setDownload(String download) {
-        this.download = download;
+    public void setPhotos(String photos) {
+        this.photos = photos;
     }
 
-    public String getDownloadLocation() {
-        return downloadLocation;
+    public String getLikes() {
+        return likes;
     }
 
-    public void setDownloadLocation(String downloadLocation) {
-        this.downloadLocation = downloadLocation;
+    public void setLikes(String likes) {
+        this.likes = likes;
+    }
+
+    public String getPortfolio() {
+        return portfolio;
+    }
+
+    public void setPortfolio(String portfolio) {
+        this.portfolio = portfolio;
+    }
+
+    public String getFollowing() {
+        return following;
+    }
+
+    public void setFollowing(String following) {
+        this.following = following;
+    }
+
+    public String getFollowers() {
+        return followers;
+    }
+
+    public void setFollowers(String followers) {
+        this.followers = followers;
     }
 
 }

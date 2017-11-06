@@ -26,16 +26,16 @@ public class User {
     private String lastName;
     @SerializedName("twitter_username")
     @Expose
-    private String twitterUsername;
+    private Object twitterUsername;
     @SerializedName("portfolio_url")
     @Expose
-    private String portfolioUrl;
+    private Object portfolioUrl;
     @SerializedName("bio")
     @Expose
     private String bio;
     @SerializedName("location")
     @Expose
-    private String location;
+    private Object location;
     @SerializedName("total_likes")
     @Expose
     private Integer totalLikes;
@@ -50,7 +50,7 @@ public class User {
     private ProfileImage profileImage;
     @SerializedName("links")
     @Expose
-    private Links links;
+    private Links_ links;
 
     public String getId() {
         return id;
@@ -100,19 +100,19 @@ public class User {
         this.lastName = lastName;
     }
 
-    public String getTwitterUsername() {
+    public Object getTwitterUsername() {
         return twitterUsername;
     }
 
-    public void setTwitterUsername(String twitterUsername) {
+    public void setTwitterUsername(Object twitterUsername) {
         this.twitterUsername = twitterUsername;
     }
 
-    public String getPortfolioUrl() {
+    public Object getPortfolioUrl() {
         return portfolioUrl;
     }
 
-    public void setPortfolioUrl(String portfolioUrl) {
+    public void setPortfolioUrl(Object portfolioUrl) {
         this.portfolioUrl = portfolioUrl;
     }
 
@@ -124,11 +124,11 @@ public class User {
         this.bio = bio;
     }
 
-    public String getLocation() {
+    public Object getLocation() {
         return location;
     }
 
-    public void setLocation(String location) {
+    public void setLocation(Object location) {
         this.location = location;
     }
 
@@ -164,11 +164,11 @@ public class User {
         this.profileImage = profileImage;
     }
 
-    public Links getLinks() {
+    public Links_ getLinks() {
         return links;
     }
 
-    public void setLinks(Links links) {
+    public void setLinks(Links_ links) {
         this.links = links;
     }
 

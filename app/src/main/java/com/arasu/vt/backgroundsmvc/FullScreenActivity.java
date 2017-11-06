@@ -3,6 +3,7 @@ package com.arasu.vt.backgroundsmvc;
 import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.arasu.vt.backgroundsmvc.application.MyApplication;
@@ -21,6 +22,8 @@ public class FullScreenActivity extends AppCompatActivity {
         try {
             Bundle bundle=getIntent().getExtras();
             url=bundle.getString("image");
+            String id=bundle.getString("id");
+            Log.d("Id"," : "+id);
             if(url!=null){
                 Picasso.with(FullScreenActivity.this)
                         .load(url)

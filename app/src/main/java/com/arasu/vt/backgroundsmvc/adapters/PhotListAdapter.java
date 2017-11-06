@@ -105,6 +105,7 @@ public class PhotListAdapter extends RecyclerView.Adapter<PhotListAdapter.MyView
                     holder.itemView.setOnClickListener(v -> {
                         Context context = holder.itemView.getContext();
                         Intent intent=new Intent(context,FullScreenActivity.class);
+                        intent.putExtra("id",photoResponses.get(position).getId());
                         intent.putExtra("image",photoResponses.get(position).getUrls().getFull());
                         context.startActivity(intent);
                     });
