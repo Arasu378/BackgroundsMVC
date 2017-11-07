@@ -15,7 +15,7 @@ import rx.subjects.BehaviorSubject;
  */
 
 public class FullScreenViewModel {
-    private BehaviorSubject<GetPhotoByIdResponse>photoresponse=BehaviorSubject.create();
+    private BehaviorSubject<GetPhotoByIdResponse>photoresponse=BehaviorSubject.create(new GetPhotoByIdResponse());
     private POJOInterface pojoInterface;
     @Inject
     public FullScreenViewModel(POJOInterface pojoInterface){
@@ -26,9 +26,14 @@ public class FullScreenViewModel {
                 .getPhotoDetailsById(id)
                 .doOnNext(photosk ->{
                   //  JSONObject list=new JSONObject(photoresponse.getValue());
+                   GetPhotoByIdResponse res= photoresponse.getValue();
+                    photoresponse.onNext(res);
                 })
                 .doOnTerminate(()-> {
 
                 });
+    }
+    public Observable<GetPhotoByIdResponse>getPhotoData(){
+        return photoresponse.asObservable();
     }
 }
