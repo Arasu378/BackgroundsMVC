@@ -29,6 +29,7 @@ public class PictureViewModel {
             return Observable.empty();
         }
         isLoading.onNext(true);
+
         return pojoInterface
                 .getPhotosList(per_page,order_By,page)
                 .doOnNext(photosl ->{
