@@ -19,7 +19,7 @@ public class CustomBindingAdapter {
         Picasso.with(view.getContext())
                 .load(path)
                 .placeholder(R.color.colorAccent)
-                .fit()
+               // .fit()
                 .into(view);
     }
     @BindingAdapter({"app:poster_full"})

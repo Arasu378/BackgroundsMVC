@@ -103,7 +103,9 @@ public class MainActivity extends AppCompatActivity implements PhotListAdapter.P
         subscription.add(viewModel.loadPhotos(perPage,order_By)
         .subscribeOn(Schedulers.computation())
         .observeOn(AndroidSchedulers.mainThread())
-        .doOnError(throwable -> Log.e("Error : ",""+throwable.getMessage()))
+        .doOnError(throwable -> {Log.e("Error : ",""+throwable.getMessage());
+
+        })
         .subscribe(photosl ->{
             binding.recyclerPictures.setVisibility(View.VISIBLE);
             binding.loading.setVisibility(View.GONE);

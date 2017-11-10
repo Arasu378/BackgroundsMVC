@@ -8,13 +8,19 @@
         android:orientation="vertical"
         android:layout_height="match_parent"
         tools:context="com.arasu.vt.backgroundsmvc.FullScreenActivity">
-        <it.sephiroth.android.library.imagezoom.ImageViewTouch
+        <!--<it.sephiroth.android.library.imagezoom.ImageViewTouch-->
+            <!--android:id="@+id/imgDisplay"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:layout_marginBottom="20dp"-->
+            <!--android:adjustViewBounds="true"-->
+            <!--android:layout_width="match_parent"-->
+
+            <!--android:layout_height="match_parent"/>-->
+        <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
             android:id="@+id/imgDisplay"
+            android:layout_width="match_parent"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
-            android:adjustViewBounds="true"
-            android:layout_width="match_parent"
-
             android:layout_height="match_parent"/>
     </LinearLayout>
 </layout>
